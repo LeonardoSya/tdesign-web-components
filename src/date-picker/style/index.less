@@ -1,0 +1,57 @@
+@import '../../_common/style/web/base.less';
+
+.t-date-picker__header {
+  position: relative;
+}
+
+.t-date-picker__header > .t-portal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+}
+
+.t-date-picker-header__panel-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  gap: 2px;
+  list-style: none;
+}
+
+.t-date-picker-header__panel-item {
+  display: block;
+  border-radius: 3px;
+  line-height: 22px;
+  cursor: pointer;
+  padding: 3px 8px;
+  color: var(--td-text-color-primary);
+  transition: background-color 0.2s linear;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    background-color: var(--td-bg-color-container-hover);
+  }
+}
+
+.t-date-picker__header-controller-month-popup,
+.t-date-picker__header-controller-year-popup {
+  > .t-popup__content,
+  > .t-popup__content--arrow {
+    // 下拉框长度
+    max-height: 160px;
+    overflow-y: auto;
+    padding: 6px;
+  }
+}
+
+.t-popup__content,
+.t-popup__content--arrow {
+  margin-top: 8px !important;
+  padding: 0;
+}
